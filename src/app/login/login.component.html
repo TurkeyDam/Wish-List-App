@@ -1,0 +1,41 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button default-href="#"></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      Login Page
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content class="ion-padding" [fullscreen]="true">
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <div id="container">
+        <div class="icon-container center-content">
+          <ion-icon name="logo-ionic" size="large" color="primary" aria-label="true"></ion-icon>
+          
+        </div>
+        <h2 class="center-content"><br> <b style="font-size: 30px">Bucket!</b></h2>
+        <ion-item>
+          <ion-label position="floating">Email</ion-label>
+          <ion-input type="email" formControlName="email" required></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating">Password</ion-label>
+          <ion-input type="password" formControlName="password" required></ion-input>
+        </ion-item>
+        
+        <p><a href="/register">Forgot your password ?</a></p>
+
+        <ion-button  type="submit" class="full-width-round-button button-top-margin">
+          Login
+        </ion-button>
+        <ion-button class="full-width-round-button" (click)="navigateToRegister()">
+          Register
+        </ion-button>
+      </div>
+    </form>
+</ion-content>

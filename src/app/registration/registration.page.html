@@ -1,0 +1,62 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button default-href="#"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Registration Page</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <form (ngSubmit)="onSubmit()"> 
+    <div id="container">
+      <h2><b>CREATE ACCOUNT</b></h2>
+      <ion-list>
+        <!-- Account Name -->
+        <ion-item>
+          <ion-label position="floating">Account Name</ion-label>
+          <ion-input [(ngModel)]="accountName" name="accountName" required></ion-input>
+        </ion-item>
+
+        <!-- Phone Number -->
+        <ion-item>
+          <ion-label position="floating">Phone Number</ion-label>
+          <ion-input [(ngModel)]="phoneNumber" name="phoneNumber" type="tel" required></ion-input>
+        </ion-item>
+
+        <!-- Birthday -->
+        <ion-item>
+          <ion-label position="floating">Birthday</ion-label>
+          <ion-input [(ngModel)]="birthday" name="birthday" type="date" required></ion-input>
+        </ion-item>
+
+        <!-- Password -->
+        <ion-item>
+          <ion-label position="floating">Password</ion-label>
+          <ion-input [(ngModel)]="password" name="password" [type]="showPassword ? 'text' : 'password'" required>
+            <ion-input-password-toggle slot="end"></ion-input-password-toggle>
+          </ion-input>
+          <!-- <ion-button fill="clear" slot="end" (click)="toggleShowPassword()">
+            <ion-icon [name]="showPassword ? 'eye-off' : 'eye'"></ion-icon>
+          </ion-button> -->
+        </ion-item>
+
+        <!-- Confirm Password -->
+        <ion-item>
+          <ion-label position="floating">Confirm Password</ion-label>
+          <ion-input [(ngModel)]="confirmPassword" name="confirmPassword" [type]="showPassword ? 'text' : 'password'" required>
+            <ion-input-password-toggle slot="end"></ion-input-password-toggle>
+          </ion-input>
+          <!-- <ion-button fill="clear" slot="end" (click)="toggleShowPassword()">
+            <ion-icon [name]="showPassword ? 'eye-off' : 'eye'"></ion-icon>
+          </ion-button> -->
+        </ion-item>
+      </ion-list>
+
+      <!-- Submit Button -->
+      <ion-button expand="block" type="submit">Create</ion-button>
+    </div>
+  </form>
+</ion-content>
+
+

@@ -1,0 +1,29 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Home
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <!-- <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Blank</ion-title>
+    </ion-toolbar>
+  </ion-header> -->
+
+  <div id="container">
+    <div class="icon-container">
+      <ion-icon name="logo-ionic" size="large" color="primary" aria-label="true"></ion-icon>
+      <h2>Welcome <br> to <br> <b style="font-size: 30px">Bucket!</b></h2>
+    </div>
+    <ion-button (click)="navigateToLoginOrRegister()">
+      Login or Register
+    </ion-button>
+    <br>
+    <ion-button>
+      Enter as Guest
+    </ion-button>
+  </div>
+</ion-content>
