@@ -1,12 +1,12 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { HomePage } from './home.page';
+import { AddItemModalPage } from './add-item-modal.page';
 
-describe('HomePagePage', () => {
-  let component: HomePage;
-  let fixture: ComponentFixture<HomePage>;
+describe('AddItemModalPage', () => {
+  let component: AddItemModalPage;
+  let fixture: ComponentFixture<AddItemModalPage>;
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(HomePage);
+    fixture = TestBed.createComponent(AddItemModalPage);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

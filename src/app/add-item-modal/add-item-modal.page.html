@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Add Item</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button default-href="#" text="Cancel" icon=" "></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <form>
+    <img src=".\assets\img\1.jpg" alt="Item Image" class="item-image">
+    <ion-item>
+      <ion-label position="floating">Item Name</ion-label>
+      <ion-input name="itemName" required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Description</ion-label>
+      <ion-input name="itemDescription"></ion-input>
+    </ion-item>
+    <ion-button expand="full" type="submit">Add Item</ion-button>
+  </form>
+</ion-content>

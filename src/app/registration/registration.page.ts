@@ -2,8 +2,8 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonContent, IonHeader, IonTitle, IonToolbar, IonButton, IonButtons, IonBackButton, IonIcon, IonInput, IonList, IonLabel, IonItem, IonInputPasswordToggle } from '@ionic/angular/standalone';
-import { addIcons } from 'ionicons';
-import { eye, logoIonic } from 'ionicons/icons';
+// import { addIcons } from 'ionicons';
+// import { eye, logoIonic } from 'ionicons/icons';
 
 
 @Component({
@@ -19,7 +19,7 @@ import { eye, logoIonic } from 'ionicons/icons';
     CommonModule, 
     FormsModule, 
     IonButton,
-    IonIcon,
+    // IonIcon,
     IonInput,
     IonList,
     IonLabel,

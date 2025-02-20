@@ -1,0 +1,115 @@
+<ion-header [translucent]="true">
+  <ion-toolbar >
+    <ion-title>Profile</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="profile-header">
+    <ion-avatar class="profile-picture">
+      <img src=".\assets\img\man-with-beard.jpg" alt="Profile Picture">
+    </ion-avatar>
+    <h2>John Doe</h2>
+    <p>john.doe&#64;example.com</p>
+  </div>
+
+  <div class="images">
+    <div class="one-image" *ngFor="let image of images">
+      <img [src]="image" />
+    </div>
+  </div>
+
+  <!-- <ion-list>
+    <ion-list-header>
+      <ion-label>My Wishlist</ion-label>
+    </ion-list-header>
+    <ion-grid>
+      <ion-row>
+        <ion-col size="6">
+          <ion-item >
+            <ion-thumbnail slot="start">
+              <img src="https://via.placeholder.com/100" alt="Item 1">
+            </ion-thumbnail>
+            <ion-label>
+              <h2>Item 1</h2>
+              <p>$19.99</p>
+            </ion-label>
+        
+          </ion-item>
+        </ion-col>
+        
+        <ion-col size="6">
+          <ion-item>
+            <ion-thumbnail slot="start">
+              <img src="https://via.placeholder.com/100" alt="Item 2">
+            </ion-thumbnail>
+            <ion-label>
+              <h2>Item 2</h2>
+              <p>$29.99</p>
+            </ion-label>
+            
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="6">
+          <ion-item>
+            <ion-thumbnail slot="start">
+              <img src="https://via.placeholder.com/100" alt="Item 1">
+            </ion-thumbnail>
+            <ion-label>
+              <h2>Item 1</h2>
+              <p>$19.99</p>
+            </ion-label>
+            
+          </ion-item>
+        </ion-col>
+        
+        <ion-col size="6">
+          <ion-item>
+            <ion-thumbnail slot="start">
+              <img src="https://via.placeholder.com/100" alt="Item 2">
+            </ion-thumbnail>
+            <ion-label>
+              <h2>Item 2</h2>
+              <p>$29.99</p>
+            </ion-label>
+    
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="6">
+          <ion-item>
+            <ion-thumbnail slot="start">
+              <img src="https://via.placeholder.com/100" alt="Item 1">
+            </ion-thumbnail>
+            <ion-label>
+              <h2>Item 1</h2>
+              <p>$19.99</p>
+            </ion-label>
+  
+          </ion-item>
+        </ion-col>
+        
+        <ion-col size="6">
+          <ion-item>
+            <ion-thumbnail slot="start">
+              <img src="https://via.placeholder.com/100" alt="Item 2">
+            </ion-thumbnail>
+            <ion-label>
+              <h2>Item 2</h2>
+              <p>$29.99</p>
+            </ion-label>
+  
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <!-- Add more items as needed
+  </ion-list> -->
+</ion-content>
+
+<ion-router-outlet></ion-router-outlet>
+<app-bottom-nav-bar></app-bottom-nav-bar>
+

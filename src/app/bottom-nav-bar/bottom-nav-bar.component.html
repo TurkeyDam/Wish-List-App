@@ -1,0 +1,24 @@
+<ion-footer>
+  <div class="add-button-container">
+    <ion-button shape="round" class="add-button" aria-label="Favorite" (click)="openAddItem()">
+      <ion-icon class="add-icon" name="add-outline"></ion-icon>
+    </ion-button>
+  </div>
+
+  <ion-toolbar>
+    <ion-buttons slot="start" (click)="goToHome()">
+      <ion-icon [icon]="icons.home"></ion-icon>
+    </ion-buttons>
+    <ion-buttons slot="end" (click)="goToEvents()">
+      <ion-icon [icon]="icons.balloon"></ion-icon>
+    </ion-buttons>
+    <ion-buttons slot="start" (click)="goToSearch()">
+      <ion-icon [icon]="icons.search"></ion-icon>
+    </ion-buttons>
+    <ion-buttons slot="end" (click)="goToProfile()">
+      <ion-icon [icon]="icons.person"></ion-icon>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>
+
+

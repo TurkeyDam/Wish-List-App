@@ -1,0 +1,77 @@
+.profile-header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .profile-picture {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 10px;
+  }
+  
+  ion-avatar img {
+    border-radius: 50%;
+  }
+  
+  ion-list {
+    background: transparent;
+  }
+  
+  ion-item {
+    
+    --padding-start: 0;
+    --inner-padding-end: 0;
+  }
+  
+  ion-thumbnail {
+    --size: 80px;
+    --border-radius: 10px;
+  }
+
+  .floating-tab-bar {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    border-radius: 25px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    background: var(--ion-color-light);
+    z-index: 1000;
+  }
+  
+  ion-tab-button {
+    --color: var(--ion-color-medium);
+    --color-selected: var(--ion-color-primary);
+  }
+  
+  ion-fab {
+    z-index: 1001; /* Ensure FAB is above the tab bar */
+  }
+
+  .images {
+    column-count: 2; // Default to two columns
+    column-gap: 10px; // Space between columns
+    max-height: calc(100vh - 56px); // Adjust based on the header height
+    overflow-y: auto; // Enable vertical scrolling
+  
+    @media (min-width: 420px) {
+      column-count: 2; // Three columns for medium devices
+    }
+  
+    @media (min-width: 720px) {
+      column-count: 4; // Four columns for larger devices
+    }
+  }
+  
+  .one-image {
+    break-inside: avoid; // Prevent image breakage in columns
+    margin-bottom: 10px; // Space below each image
+  
+    img {
+      width: 100%; // Make images responsive
+      display: block; // Remove bottom space under images
+      border-radius: 8px; // Optional styling for rounded corners
+      box-shadow: 0px 4px 8px rgba(0,0,0,0.1); // Optional shadow effect
+    }
+  }

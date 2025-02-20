@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ReactiveFormsModule, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { CommonModule } from '@angular/common';
@@ -8,26 +8,27 @@ import { logoIonic } from 'ionicons/icons';
 
 @Component({
   selector: 'app-login',
+  templateUrl: './login.page.html',
+  styleUrls: ['./login.page.scss'],
   standalone: true,
-  imports: [
-    CommonModule,
-    ReactiveFormsModule,
-    IonContent,
-    IonHeader,
-    IonToolbar,
-    IonTitle,
+  imports: 
+  [
+    IonContent, 
+    IonHeader, 
+    IonTitle, 
+    IonToolbar, 
+    CommonModule, 
+    IonLabel,
     IonButton,
     IonItem,
-    IonLabel,
     IonInput,
     IonButtons,
     IonBackButton,
     IonIcon,
-  ],
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss'],
+    ReactiveFormsModule,
+  ]
 })
-export class LoginComponent {
+export class LoginPage implements OnInit {
   loginForm: FormGroup;
 
   constructor(private fb: FormBuilder, private router: Router) {
@@ -54,4 +55,8 @@ export class LoginComponent {
   
     
   }
+
+  ngOnInit() {
+  }
+
 }

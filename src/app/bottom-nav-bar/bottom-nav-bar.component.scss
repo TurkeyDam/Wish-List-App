@@ -1,0 +1,17 @@
+.add-button-container {
+    position: absolute;
+    bottom: 60px; /* Adjust based on your footer height */
+    left: calc(50% - 30px); /* Center horizontally */
+    right: calc(50% - 30px); /* Center horizontally */
+  }
+  
+.add-button {
+    width: 70px;
+    height: 70px;
+}
+
+Ion-Buttons {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+}

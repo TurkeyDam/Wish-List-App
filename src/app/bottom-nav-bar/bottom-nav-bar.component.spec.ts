@@ -1,17 +1,17 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
-import { LoginComponent } from './login.component';
+import { BottomNavBarComponent } from './bottom-nav-bar.component';
 
-describe('LoginComponent', () => {
-  let component: LoginComponent;
-  let fixture: ComponentFixture<LoginComponent>;
+describe('BottomNavBarComponent', () => {
+  let component: BottomNavBarComponent;
+  let fixture: ComponentFixture<BottomNavBarComponent>;
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      imports: [LoginComponent],
+      imports: [BottomNavBarComponent],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(LoginComponent);
+    fixture = TestBed.createComponent(BottomNavBarComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   }));
