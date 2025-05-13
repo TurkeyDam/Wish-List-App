@@ -2,17 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ReactiveFormsModule, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { IonContent, IonHeader, IonToolbar, IonTitle, IonButton, IonItem, IonLabel, IonInput, IonButtons, IonBackButton, IonIcon } from '@ionic/angular/standalone';
-import { addIcons } from 'ionicons';
-import { logoIonic } from 'ionicons/icons';
+import { IonContent, IonHeader, IonToolbar, IonTitle, IonButton, IonItem, IonLabel, IonInput} from '@ionic/angular/standalone';
 
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.page.html',
-  styleUrls: ['./login.page.scss'],
+  selector: 'app-email-recovery',
+  templateUrl: './email-recovery.page.html',
+  styleUrls: ['./email-recovery.page.scss'],
   standalone: true,
-  imports: 
-  [
+  imports: [
     IonContent, 
     IonHeader, 
     IonTitle, 
@@ -22,33 +19,18 @@ import { logoIonic } from 'ionicons/icons';
     IonButton,
     IonItem,
     IonInput,
-    IonButtons,
-    IonBackButton,
-    IonIcon,
     ReactiveFormsModule,
   ]
 })
-export class LoginPage implements OnInit {
+export class EmailRecoveryPage implements OnInit {
   loginForm: FormGroup;
-
+  
   constructor(private fb: FormBuilder, private router: Router) {
     this.loginForm = this.fb.group({
       email: ['', [Validators.required, Validators.email]],
-      password: ['', [Validators.required]],
-    });
-    addIcons({
-      'logo-ionic': logoIonic,
     });
   }
-
-  navigateToHome() {
-    this.router.navigate(['/home']); // Adjust the path as necessary
-  }
-
-  navigateToRegister() {
-    this.router.navigate(['/register']); // Adjust the path as necessary
-  }
-
+  
   onSubmit() {
     if (this.loginForm.valid) {
       console.log('Login successful:', this.loginForm.value);
@@ -56,11 +38,14 @@ export class LoginPage implements OnInit {
     } else {
       console.log('Form is invalid');
     }
-  
-    
   }
 
-  ngOnInit() {
+  ngOnInit(): void {
+    console.log('NameRecoveryPage initialized');
+  }
+
+  navigateToNameRecovery() {
+    this.router.navigate(['/name-recovery']); // Adjust the path as necessary
   }
 
 }

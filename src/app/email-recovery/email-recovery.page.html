@@ -1,0 +1,27 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Email Recovery</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding" [fullscreen]="true">
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <div id="container">
+      
+        <h2 class="center-content"><br> <b style="font-size: 30px">Account Recovery</b></h2>
+        <ion-item>
+          <ion-label position="floating">Email</ion-label>
+          <ion-input type="email" formControlName="email" required></ion-input>
+        </ion-item>
+        
+
+        <ion-button  type="submit" class="full-width-round-button button-top-margin">
+          Next
+        </ion-button>
+        <ion-button class="full-width-round-button" (click)="navigateToNameRecovery()">
+          No I forgot or lost access to my email
+        </ion-button> 
+        <p class="customer-support"><a>Customer support</a></p>
+      </div>
+  </form>
+</ion-content>

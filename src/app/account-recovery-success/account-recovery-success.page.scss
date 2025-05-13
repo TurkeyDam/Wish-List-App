@@ -1,0 +1,61 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+.profile-option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 300px;
+  margin: 10px ;
+}
+
+.profile-option img {
+  width: 80px;
+  height: 80px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ccc;
+}
+
+ion-button {
+    flex-grow: 1;
+}
+.alt-option {
+  margin-top: 10px;
+  font-style: italic;
+}
+
+.alt-option a {
+  text-decoration: underline;
+  color: #000;
+}
+
+.support-link {
+  margin-top: 30px;
+  font-weight: bold;
+}
+
+.support-link a {
+  color: black;
+  text-decoration: underline;
+}
+
+  .customer-support {
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+    
+    color: #007BFF; /* Change this to your desired color */
+    text-decoration: underline; /* Underline the text */
+  }

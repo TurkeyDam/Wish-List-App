@@ -1,0 +1,29 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Name Recovery</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding" [fullscreen]="true">
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <div id="container">
+      
+        <h2 class="center-content"><br> <b style="font-size: 30px">Account Recovery</b></h2>
+        <p>Please search your account using full name and birthday</p>
+        <ion-item>
+          <ion-label position="floating">Full Name</ion-label>
+          <ion-input type="text" formControlName="fullname" required></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating">Birthday</ion-label>
+          <ion-input type="text" formControlName="birthday" required></ion-input>
+        </ion-item>
+        
+        <ion-button class="full-width-round-button">
+          Next
+        </ion-button> 
+        <p class="customer-support"><a>Customer support</a></p>
+      </div>
+    </form>
+</ion-content>

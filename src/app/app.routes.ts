@@ -41,5 +41,29 @@ export const routes: Routes = [
     path: 'events',
     loadComponent: () => import('./events/events.page').then( m => m.EventsPage)
   },
+  {
+    path: 'email-recovery',
+    loadComponent: () => import('./email-recovery/email-recovery.page').then( m => m.EmailRecoveryPage)
+  },
+  {
+    path: 'account-recovery-success',
+    loadComponent: () => import('./account-recovery-success/account-recovery-success.page').then( m => m.AccountRecoverySuccessPage)
+  },
+  {
+    path: 'account-recovery-fail',
+    loadComponent: () => import('./account-recovery-fail/account-recovery-fail.page').then( m => m.AccountRecoveryFailPage)
+  },
+  {
+    path: 'account-recovery-password-reset',
+    loadComponent: () => import('./account-recovery-password-reset/account-recovery-password-reset.page').then( m => m.AccountRecoveryPasswordResetPage)
+  },
+  {
+    path: 'duplicate-detected',
+    loadComponent: () => import('./duplicate-detected/duplicate-detected.page').then( m => m.DuplicateDetectedPage)
+  },
+  {
+    path: 'name-recovery',
+    loadComponent: () => import('./name-recovery/name-recovery.page').then( m => m.NameRecoveryPage)
+  },
   
 ];
