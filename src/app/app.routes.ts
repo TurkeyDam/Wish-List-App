@@ -65,5 +65,9 @@ export const routes: Routes = [
     path: 'name-recovery',
     loadComponent: () => import('./name-recovery/name-recovery.page').then( m => m.NameRecoveryPage)
   },
+  {
+    path: 'password-reset-link',
+    loadComponent: () => import('./password-reset-link/password-reset-link.page').then( m => m.PasswordResetLinkPage)
+  },
   
 ];

@@ -5,7 +5,7 @@
 </ion-header>
 
 <ion-content class="ion-padding" [fullscreen]="true">
-  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+  <form [formGroup]="emailForm" (ngSubmit)="onSubmit()">
       <div id="container">
       
         <h2 class="center-content"><br> <b style="font-size: 30px">Account Recovery</b></h2>
@@ -14,8 +14,11 @@
           <ion-input type="email" formControlName="email" required></ion-input>
         </ion-item>
         
+        <div *ngIf="emailForm.get('email')!.invalid && emailForm.get('email')!.touched">
+                <p class="error-message">Please enter a valid email address.</p>
+        </div>
 
-        <ion-button  type="submit" class="full-width-round-button button-top-margin">
+        <ion-button  type="submit" class="full-width-round-button button-top-margin" [disabled]="emailForm.invalid" (click)="navigateToPasswordReset()">
           Next
         </ion-button>
         <ion-button class="full-width-round-button" (click)="navigateToNameRecovery()">

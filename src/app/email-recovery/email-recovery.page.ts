@@ -22,18 +22,19 @@ import { IonContent, IonHeader, IonToolbar, IonTitle, IonButton, IonItem, IonLab
     ReactiveFormsModule,
   ]
 })
+
 export class EmailRecoveryPage implements OnInit {
-  loginForm: FormGroup;
+  emailForm: FormGroup;
   
   constructor(private fb: FormBuilder, private router: Router) {
-    this.loginForm = this.fb.group({
+    this.emailForm = this.fb.group({
       email: ['', [Validators.required, Validators.email]],
     });
   }
   
   onSubmit() {
-    if (this.loginForm.valid) {
-      console.log('Login successful:', this.loginForm.value);
+    if (this.emailForm.valid) {
+      console.log('Login successful:', this.emailForm.value);
       // Here you can handle your login logic (e.g., call an authentication service)
     } else {
       console.log('Form is invalid');
@@ -42,6 +43,10 @@ export class EmailRecoveryPage implements OnInit {
 
   ngOnInit(): void {
     console.log('NameRecoveryPage initialized');
+  }
+
+  navigateToPasswordReset() {
+    this.router.navigate(['/password-reset-link']); // Adjust the path as necessary
   }
 
   navigateToNameRecovery() {
